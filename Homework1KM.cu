@@ -1,4 +1,5 @@
-//nvcc ballInABox.cu -o bounce -lglut -lm -lGLU -lGL																													
+//nvcc ballInABox.cu -o bounce -lglut -lm -lGLU -lGL	
+//nvcc Homework1KM.cu -o bounce -lglut -lm -lGLU -lGL															
 //To stop hit "control c" in the window you launched it from.
 #include <iostream>
 #include <fstream>
@@ -67,9 +68,9 @@ void setInitailConditions()
 	Position.y = 0.0;
 	Position.z = 0.0;
 	
-	Velocity.x = 5.5;
-	Velocity.y = 5.5;
-	Velocity.z = 5.5;
+	Velocity.x = 10.5;
+	Velocity.y = 10.5;
+	Velocity.z = 10.5;
 	
 	Force.x = 0.0;
 	Force.y = 0.0;
@@ -147,7 +148,7 @@ void getForces()
 
 	if(Position.x+sphereRadius > 2.5 )
 	{
-		Force.x=-1000.0;
+		Force.x=-1900.0;
 	}
 	else if( Position.x-sphereRadius < -2.5)
 	{
@@ -163,7 +164,7 @@ void getForces()
 	}
 	if(Position.z+sphereRadius > 2.5 )
 	{
-		Force.z=-1000.0;
+		Force.z=-1800.0;
 	}
 	else if( Position.z-sphereRadius < -2.5)
 	{
